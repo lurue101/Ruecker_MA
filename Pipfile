@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+name = "alcemy"
+url = "https://gitlab-ci-token:${GITLAB_ACCESS_TOKEN}@gitlab.com/api/v4/projects/13772841/packages/pypi/simple"
+verify_ssl = true
+
+[packages]
+sklearn = "1.2.dev0"
+prism_raymond = {index = "alcemy", version = "==0.64.2"}
+torch = "1.4.0"
+torchvision = "0.14.1"
+matplotlib = "3.6.2"
+scipy = "1.9.3"
+mutual-info = "*"
+pytest = "7.2.0"
+flake8 = "6.0.0"
+isort = "5.11.4"
+black = "22.12.0"
+upsetplot = "0.7.0"
+seaborn = "0.12.1"
+plotly = "5.11.0"
+
+[dev-packages]
+jupyter = "*"
+nb-black = "*"
+
+[requires]
+python_version = "3.10"
